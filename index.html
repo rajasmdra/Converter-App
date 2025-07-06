@@ -8,21 +8,135 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href=""><h1 class="logo">Convertin.</h1></a>
-        <a href="">Home</a>
-        <a href="">Temperature</a>
-        <a href="">Mass</a>
-        <a href="">Length</a>
-        <a href="">Time</a>
+    <nav>     
+        <h1 class="logo">Convertin.</h1>
+        <button onclick="showHome()" >Home</button>
+        <button onclick="showTemperature()">Temperature</button>
+        <button onclick="showLength()">Length</button>
+        <button onclick="showMass()">Mass</button>
+        <button onclick="showTime()" >Time</button>
     </nav>
 
-<main>
-    <h1>Welcome to Convertin.</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aliquam animi nisi esse ullam odit ipsam porro, voluptatum sapiente et.</p>
-    <button>Start</button>
-</main>
+    <div class="side">
+        <main>
+            <div class="home" id="home">
+                <h1>Welcome to Convertin.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aliquam animi nisi esse ullam odit ipsam porro, voluptatum sapiente et.</p>
+                <button>Start</button>
+            </div>
     
+            <div class="bar" id="bar">
+                <h1></h1>
+    
+                <input type="number" placeholder="Input Number" name="temperature" id="inputValue">
+    
+                <div class="unit tempUnit">
+                    <select name="Unit Before" class="unitBefore">
+                        <option value="" selected disabled>From</option>
+                        <option value="c">Celcius</option>
+                        <option value="f">Fahrenheit</option>
+                        <option value="r">Reamur</option>
+                        <option value="k">Kelvin</option>
+                    </select>
+            
+                    <select name="Unit After" class="unitAfter">
+                        <option value="" selected disabled>To</option>
+                        <option value="c">Celcius</option>
+                        <option value="f">Fahrenheit</option>
+                        <option value="r">Reamur</option>
+                        <option value="k">Kelvin</option>
+                    </select>
+                </div>
+
+                <div class="unit lengthUnit">
+                    <select name="Unit Before" class="unitBefore">
+                        <option value="" selected disabled>From</option>
+                        <option value="mm">Milimeter (mm)</option>
+                        <option value="cm">Centimeter (cm)</option>
+                        <option value="dm">Decimeter (dm)</option>
+                        <option value="m">Meter (m)</option>
+                        <option value="dam">Decameter (dam)</option>
+                        <option value="hm">Hectometer (hm)</option>
+                        <option value="km">Kilometer (km)</option>
+                    </select>
+            
+                    <select name="Unit After" class="unitAfter">
+                        <option value="" selected disabled>To</option>
+                        <option value="mm">Milimeter (mm)</option>
+                        <option value="cm">Centimeter (cm)</option>
+                        <option value="dm">Decimeter (dm)</option>
+                        <option value="m">Meter (m)</option>
+                        <option value="dam">Decameter (dam)</option>
+                        <option value="hm">Hectometer (hm)</option>
+                        <option value="km">Kilometer (km)</option>
+                    </select>
+                </div>
+
+                <div class="unit massUnit">
+                    <select name="Unit Before" class="unitBefore">
+                        <option value="" selected disabled>From</option>
+                        <option value="mg">Miligram (mg)</option>
+                        <option value="cg">Centigram (cg)</option>
+                        <option value="dg">Decigram (dg)</option>
+                        <option value="g">Gram (g)</option>
+                        <option value="dag">Decagram (dag)</option>
+                        <option value="hg">Hectogram (hg)</option>
+                        <option value="kg">Kilogram (kg)</option>
+                    </select>
+            
+                    <select name="Unit After" class="unitAfter">
+                        <option value="" selected disabled>To</option>
+                        <option value="mg">Miligram (mg)</option>
+                        <option value="cg">Centigram (cg)</option>
+                        <option value="dg">Decigram (dg)</option>
+                        <option value="g">Gram (g)</option>
+                        <option value="dag">Decagram (dag)</option>
+                        <option value="hg">Hectogram (hg)</option>
+                        <option value="kg">Kilogram (kg)</option>
+                    </select>
+                </div>
+    
+                <div class="unit timeUnit">
+                    <select name="Unit Before" class="unitBefore">
+                        <option value="" selected disabled>From</option>
+                        <option value="s">Second</option>
+                        <option value="min">Minute</option>
+                        <option value="h">Hour</option>
+                        <option value="d">Day</option>
+                        <option value="m">Month</option>
+                        <option value="y">Year</option>
+                    </select>
+            
+                    <select name="Unit After" class="unitAfter">
+                        <option value="" selected disabled>To</option>
+                        <option value="s">Second</option>
+                        <option value="min">Minute</option>
+                        <option value="h">Hour</option>
+                        <option value="d">Day</option>
+                        <option value="m">Month</option>
+                        <option value="y">Year</option>
+                    </select>
+                </div>
+    
+                <button onclick="convert()">Convert</button>
+                
+                <div class="result">
+                    <p class="res">Result:</p>
+                    <p id="result">0</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="">Instagram</a>
+            <a href="">Linkedin</a>
+            <a href="">Github</a>
+            <p>&copy; Rajasmdra 2025. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    
+    <script src="script.js"></script>
     
 </body>
 </html>
