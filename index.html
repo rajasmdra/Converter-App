@@ -8,13 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>     
-        <h1 class="logo">Convertin.</h1>
-        <button onclick="showHome()" >Home</button>
-        <button onclick="showTemperature()">Temperature</button>
-        <button onclick="showLength()">Length</button>
-        <button onclick="showMass()">Mass</button>
-        <button onclick="showTime()" >Time</button>
+    <nav>    
+        <div class="head">
+            <h1 class="logo">Convertin.</h1>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu">
+            <button onclick="showHome()">
+                <i class="fa-solid fa-home"></i>
+                <p>Home</p>
+            </button>
+            <button onclick="showTemperature()">
+                <i class="fa-solid fa-temperature-half"></i>
+                <p>Temperature</p>
+            </button>
+            <button onclick="showLength()">
+                <i class="fa-solid fa-ruler"></i>
+                <p>Length</p>
+            </button>
+            <button onclick="showMass()">
+                <i class="fa-solid fa-weight-hanging"></i>
+                <p>Mass</p>
+            
+            </button>
+            <button onclick="showTime()" >
+                <i class="fa-solid fa-clock"></i>
+                <p>Time</p>
+            
+            </button>
+        </div>
     </nav>
 
     <div class="side">
@@ -27,7 +49,6 @@
     
             <div class="bar" id="bar">
                 <h1></h1>
-    
                 <input type="number" placeholder="Input Number" name="temperature" id="inputValue">
     
                 <div class="unit tempUnit">
@@ -119,7 +140,6 @@
                 </div>
     
                 <button onclick="convert()">Convert</button>
-                
                 <div class="result">
                     <p class="res">Result:</p>
                     <p id="result">0</p>
@@ -134,9 +154,7 @@
             <p>&copy; Rajasmdra 2025. All Rights Reserved.</p>
         </footer>
     </div>
-
     
     <script src="script.js"></script>
-    
 </body>
 </html>

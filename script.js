@@ -98,7 +98,29 @@ function convert() {
 
         result = inputValue * Math.pow(10, indexBefore - indexAfter);
     }
+    else if (mode === "time") {
+        const unitArray = [["s", "min", "h", "d", "m", "y"], 
+            [1000, 
+            60 * 1000, 
+            60 * 60 * 1000, 
+            24 * 60 * 60 * 1000, 
+            30 * 24 * 60 * 60 * 1000, 
+            365 * 24 * 60 * 60 * 1000]]
+
+        const indexBefore = unitArray[0].indexOf(unitBefore);
+        const indexAfter = unitArray[0].indexOf(unitAfter);
+
+        result = (inputValue * unitArray[1][indexBefore]) / unitArray[1][indexAfter];
+    }
 
     document.getElementById("result").innerHTML = result.toFixed(2);
 }
 
+const hamburger = document.querySelector(".fa-bars"); 
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    nav.classList.toggle('show');
+});
